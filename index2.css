@@ -1,0 +1,420 @@
+/* Reset e Estilo Global */
+/* Aplica um reset básico, removendo margens, preenchimentos e ajustando o box-sizing para facilitar o layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Global para o corpo */
+/* Define a fonte e o estilo do corpo da página, garantindo uma boa legibilidade e fundo suave */
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte usada no corpo */
+    line-height: 1.6; /* Ajusta o espaçamento entre linhas para melhorar a leitura */
+    color: #333; /* Cor do texto */
+}
+
+/* Header */
+/* Estiliza a seção do cabeçalho, dando um gradiente de fundo e sombra para uma aparência elegante */
+header {
+    background: linear-gradient(90deg, #d9534f, #c9302c); /* Gradiente do fundo, de vermelho para um tom mais escuro */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo dentro do header */
+    color: white; /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor do cabeçalho */
+}
+
+/* Container do cabeçalho */
+header .container {
+    display: flex; /* Flexbox para distribuir os elementos no cabeçalho */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Espaça igualmente os itens entre si */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estilo do conteúdo do cabeçalho */
+header .header-content {
+    display: flex; /* Flexbox para alinhar o conteúdo horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+/* Imagem do banner no cabeçalho */
+header .banner-img {
+    width: 80px; /* Define o tamanho da imagem */
+    height: 80px; /* Mantém a imagem quadrada */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Faz a imagem cobrir a área sem distorção */
+}
+
+/* Título do cabeçalho */
+header h1 {
+    font-size: 2rem; /* Define o tamanho da fonte */
+    margin-bottom: 5px; /* Espaço abaixo do título */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    color: #fff; /* Cor branca para o título */
+}
+
+/* Parágrafo no cabeçalho */
+header p {
+    font-size: 1.1rem; /* Tamanho de fonte do parágrafo */
+    color: rgba(255, 255, 255, 0.8); /* Cor do texto com opacidade */
+}
+
+/* Estilo Geral */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte geral da página */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f0f9ff, #cbebff); /* Gradiente suave de fundo */
+    color: #222; /* Cor geral do texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Seção de Requisitos */
+/* Define o estilo da seção de requisitos com bordas arredondadas e sombras, criando uma caixa atraente */
+#requisitos {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #ffffff, #e9f7ff); /* Gradiente de fundo suave */
+    border-radius: 16px; /* Bordas arredondadas */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 1000px; /* Limita a largura da seção */
+    margin: 50px auto; /* Centraliza a seção */
+    position: relative; /* Permite a sobreposição de elementos, como os círculos */
+    overflow: hidden; /* Impede que o conteúdo transborde da caixa */
+}
+
+/* Círculos de fundo na seção de requisitos */
+/* Antes e depois da seção, adicionando círculos grandes e desfocados como decoração */
+#requisitos::before, #requisitos::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Círculos */
+    filter: blur(150px); /* Aplica desfoque */
+    z-index: 1; /* Coloca os círculos atrás do conteúdo */
+}
+
+#requisitos::before {
+    top: -100px; /* Posiciona o círculo no canto superior esquerdo */
+    left: -100px;
+    background: rgba(30, 144, 255, 0.2); /* Cor do primeiro círculo */
+}
+
+#requisitos::after {
+    bottom: -100px; /* Posiciona o círculo no canto inferior direito */
+    right: -100px;
+    background: rgba(255, 69, 0, 0.2); /* Cor do segundo círculo */
+}
+
+/* Título da seção de requisitos */
+#requisitos h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2.5rem; /* Tamanho grande do título */
+    color: #1e90ff; /* Cor azul */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    position: relative; /* Permite sobreposição com os círculos */
+    z-index: 2; /* Garante que o título fique acima dos círculos */
+}
+
+/* Texto da descrição dos requisitos */
+#requisitos p {
+    text-align: center; /* Centraliza o texto */
+    font-size: 1rem; /* Tamanho do texto */
+    color: #555; /* Cor cinza suave */
+    margin-bottom: 30px; /* Espaço abaixo do texto */
+    position: relative; /* Permite sobreposição com os círculos */
+    z-index: 2; /* Garante que o texto fique acima dos círculos */
+}
+
+/* Lista de Requisitos */
+.requisitos-lista {
+    display: grid; /* Usa grid para organizar os itens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas responsivas */
+    gap: 30px; /* Espaço entre os itens */
+    justify-items: center; /* Centraliza os itens na grade */
+    position: relative; /* Permite a sobreposição de elementos */
+    z-index: 2; /* Garante que os itens da lista fiquem acima dos círculos */
+}
+
+/* Item Individual de Requisito */
+.requisito-item {
+    text-align: center; /* Centraliza o conteúdo do item */
+    background: linear-gradient(145deg, #e0f7ff, #ffffff); /* Gradiente de fundo para os itens */
+    padding: 20px;
+    border-radius: 16px; /* Bordas arredondadas */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Animação suave ao passar o mouse */
+    position: relative;
+    overflow: hidden; /* Impede transbordo de conteúdo */
+}
+
+/* Efeito de hover no item */
+.requisito-item:hover {
+    transform: translateY(-10px); /* Levanta o item ao passar o mouse */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
+}
+
+.requisito-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 69, 0, 0.1); /* Cor de fundo com desfoque */
+    transform: rotate(45deg); /* Rotaciona para criar efeito de diamante */
+    opacity: 0; /* Torna invisível inicialmente */
+    transition: opacity 0.4s ease; /* Animação para mostrar o efeito */
+}
+
+.requisito-item:hover::before {
+    opacity: 1; /* Torna visível o efeito ao passar o mouse */
+}
+
+/* Imagem dentro do item */
+.requisito-item img {
+    max-width: 80px; /* Limita o tamanho da imagem */
+    margin-bottom: 15px; /* Espaço abaixo da imagem */
+    transition: transform 0.4s ease; /* Animação de transformação da imagem */
+}
+
+/* Efeito de zoom na imagem ao passar o mouse */
+.requisito-item:hover img {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+}
+
+/* Texto do item de requisito */
+.requisito-item p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0 0; /* Espaçamento em torno do texto */
+}
+
+/* Texto em negrito dentro do item */
+.requisito-item strong {
+    color: #1e90ff; /* Cor azul */
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
+}
+
+/* Animação de entrada para os itens de requisito */
+.requisito-item {
+    animation: fadeInUp 0.8s ease-out both; /* Animação de desvanecimento e subida */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(20px); /* Começa deslocado para baixo */
+    }
+    to {
+        opacity: 1; /* Torna-se visível */
+        transform: translateY(0); /* Volta à posição original */
+    }
+}
+
+/* Responsividade - Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    #requisitos {
+        padding: 30px; /* Menos padding para telas pequenas */
+    }
+
+    .requisito-item {
+        padding: 15px; /* Menos padding nos itens */
+    }
+
+    .requisito-item img {
+        max-width: 60px; /* Reduz o tamanho das imagens */
+    }
+
+    #requisitos h2 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+}
+/* Seção de Cadastro */
+/* Estilo da seção de cadastro com bordas arredondadas, sombra e círculos decorativos no fundo */
+#cadastro {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #ffffff, #e9f7ff); /* Gradiente de fundo suave */
+    border-radius: 16px; /* Bordas arredondadas */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px; /* Limita a largura da seção */
+    margin: 50px auto; /* Centraliza a seção */
+    position: relative; /* Permite sobreposição de elementos */
+    overflow: hidden; /* Impede que o conteúdo transborde da caixa */
+}
+
+/* Círculos decorativos na seção de cadastro */
+#cadastro::before,
+#cadastro::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 69, 0, 0.2); /* Cor de fundo dos círculos */
+    border-radius: 50%; /* Círculos */
+    filter: blur(150px); /* Aplica desfoque aos círculos */
+    z-index: 1; /* Coloca os círculos atrás do conteúdo */
+}
+
+#cadastro::before {
+    top: -100px; /* Posiciona o primeiro círculo */
+    left: -100px;
+}
+
+#cadastro::after {
+    bottom: -100px; /* Posiciona o segundo círculo */
+    right: -100px;
+}
+
+/* Título da seção de cadastro */
+#cadastro h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2.5rem; /* Tamanho grande do título */
+    color: #1e90ff; /* Cor azul */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    position: relative; /* Permite sobreposição com os círculos */
+    z-index: 2; /* Garante que o título fique acima dos círculos */
+}
+
+/* Descrição do cadastro */
+#cadastro .descricao-cadastro {
+    text-align: center; /* Centraliza o texto */
+    font-size: 1rem; /* Tamanho do texto */
+    color: #555; /* Cor cinza suave */
+    margin-bottom: 30px; /* Espaço abaixo da descrição */
+    position: relative; /* Permite sobreposição com os círculos */
+    z-index: 2; /* Garante que a descrição fique acima dos círculos */
+}
+
+/* Formulário de cadastro */
+#cadastro-form {
+    position: relative; /* Permite sobreposição com outros elementos */
+    z-index: 2; /* Garante que o formulário fique acima dos círculos */
+}
+
+/* Estilo para grupos de campos no formulário */
+.form-group {
+    margin-bottom: 20px; /* Espaço abaixo de cada grupo de campos */
+    position: relative; /* Permite sobreposição dos campos */
+}
+
+/* Estilo dos rótulos de campos */
+label {
+    display: block; /* Exibe o rótulo como bloco */
+    font-weight: bold; /* Deixa o rótulo em negrito */
+    margin-bottom: 8px; /* Espaço abaixo do rótulo */
+    color: #333; /* Cor do texto do rótulo */
+}
+
+/* Estilo dos campos de entrada e seletores */
+input,
+select {
+    width: 100%; /* Campos ocupam toda a largura disponível */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    border: 2px solid #ddd; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+    background: #f9f9f9; /* Cor de fundo dos campos */
+    transition: all 0.3s ease; /* Transição suave para alterações */
+    outline: none; /* Remove o contorno padrão ao focar no campo */
+}
+
+/* Estilo dos campos quando estão focados */
+input:focus,
+select:focus {
+    border-color: #1e90ff; /* Cor da borda quando o campo está em foco */
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.2); /* Sombra suave ao redor */
+    background: #ffffff; /* Fundo branco ao focar */
+}
+
+/* Estilo do placeholder nos campos de entrada */
+input::placeholder,
+select::placeholder {
+    color: #aaa; /* Cor suave para o texto do placeholder */
+    font-style: italic; /* Estilo itálico para o placeholder */
+    opacity: 0.8; /* Opacidade reduzida para o texto do placeholder */
+}
+
+/* Estilo do botão de envio */
+.btn-submit {
+    width: 100%; /* Botão ocupa toda a largura disponível */
+    padding: 12px 20px; /* Espaçamento interno do botão */
+    font-size: 1.2rem; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #fff; /* Cor do texto */
+    background: linear-gradient(145deg, #1e90ff, #0077cc); /* Gradiente de fundo */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão para indicar interatividade */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do botão */
+    transition: all 0.3s ease; /* Transição suave para interatividade */
+}
+
+/* Efeito hover no botão de envio */
+.btn-submit:hover {
+    background: linear-gradient(145deg, #0077cc, #1e90ff); /* Inverte as cores no hover */
+    transform: translateY(-3px); /* Leva o botão para cima */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+/* Efeito ativo no botão de envio */
+.btn-submit:active {
+    transform: translateY(0); /* Reseta a posição do botão */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombra suave quando pressionado */
+}
+
+/* Estilo de interatividade no formulário */
+input:hover,
+select:hover {
+    background: #eef8ff; /* Fundo mais claro ao passar o mouse sobre os campos */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    #cadastro {
+        padding: 30px; /* Menos padding em telas pequenas */
+    }
+
+    #cadastro h2 {
+        font-size: 2rem; /* Tamanho menor do título */
+    }
+
+    .btn-submit {
+        font-size: 1rem; /* Tamanho reduzido do botão */
+        padding: 10px 15px; /* Menos padding no botão */
+    }
+}
+
+/* Rodapé */
+footer {
+    background: #333; /* Fundo escuro para o rodapé */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Permite a sobreposição de elementos */
+}
+
+/* Estilo do conteúdo do rodapé */
+.footer-content {
+    position: relative; /* Permite a sobreposição com a barra */
+}
+
+/* Barra decorativa no rodapé */
+.footer-bar {
+    width: 60px; /* Largura da barra */
+    height: 4px; /* Altura da barra */
+    background: #d9534f; /* Cor da barra */
+    margin: 0 auto 10px; /* Centraliza a barra e adiciona margem abaixo */
+    border-radius: 2px; /* Bordas arredondadas para suavizar */
+}
+
+/* Parágrafo no rodapé */
+footer p {
+    margin: 0; /* Remove a margem do parágrafo */
+    font-size: 0.9rem; /* Tamanho do texto */
+    font-weight: bold; /* Texto em negrito */
+}
