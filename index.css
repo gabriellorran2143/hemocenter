@@ -14,79 +14,112 @@ body {
 
 /* ===== Estilização do cabeçalho ===== */
 
-/* Configurações gerais do cabeçalho */
 header {
-    background: linear-gradient(90deg, #d9534f, #c9302c); /* Gradiente horizontal de vermelho */
-    padding: 20px; /* Espaçamento interno do cabeçalho */
-    text-align: center; /* Centraliza o conteúdo */
-    color: white; /* Define o texto como branco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
-}
-
-/* Container do cabeçalho para centralizar e organizar os elementos */
-header .container {
-    display: flex; /* Ativa o layout flexbox */
-    align-items: center; /* Centraliza os itens verticalmente */
-    justify-content: space-between; /* Distribui os itens com espaço entre eles */
-    max-width: 1200px; /* Define a largura máxima do container */
-    margin: 0 auto; /* Centraliza o container na página */
-}
-
-/* Configuração do conteúdo do cabeçalho */
-header .header-content {
-    display: flex; /* Organiza os elementos em linha */
-    align-items: center; /* Alinha os itens verticalmente */
-    gap: 20px; /* Espaçamento de 20px entre os itens */
-}
-
-/* Estilos para a imagem do banner */
-header .banner-img {
-    width: 80px; /* Define a largura da imagem */
-    height: 80px; /* Define a altura da imagem */
-    border-radius: 50%; /* Torna a imagem circular */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorções */
-}
-
-/* Estilos para o título do cabeçalho */
-header h1 {
-    font-size: 2rem; /* Define o tamanho da fonte como 2 vezes o tamanho base */
-    margin-bottom: 5px; /* Adiciona um pequeno espaçamento inferior */
-    text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
-    color: #fff; /* Define a cor do texto como branco */
-}
-
-/* Estilos para o parágrafo do cabeçalho */
-header p {
-    font-size: 1.1rem; /* Aumenta levemente o tamanho da fonte */
-    color: rgba(255, 255, 255, 0.8); /* Texto branco com 80% de opacidade */
-}
-
-
-/* ===== Seção Sobre ===== */
-#sobre .titulo-sobre {
+    background: linear-gradient(90deg, #3498db, #ecf0f1);
+    padding: 20px;
     text-align: center;
-    color: #5C6BC0;
-}
-
-#sobre .sobre-conteudo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F1F8E9;
-    border-radius: 15px;
-    padding: 40px;
+    color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#sobre .texto {
-    flex: 1;
-    padding-right: 30px;
-    color: #333;
+header .banner-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#sobre .destaque {
-    color: #5C6BC0;
+
+
+
+/* ===== Seção Sobre ===== */
+#sobre {
+    padding: 50px 0;
+    background-image: url(''); /* Textura branca mantida */
+    background-repeat: repeat;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-sobre {
+    text-align: center;
+    font-size: 2.5em;
+    color: #c0392b; /* Vermelho suave, associado a sangue/saúde */
+    margin-bottom: 30px;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaço entre texto e imagem */
+}
+
+.texto {
+    flex: 1;
+    min-width: 300px; /* Largura mínima para o texto */
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcf8f3; /* Cor suave de fundo */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.imagem-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
+}
+
+.imagem {
+    width: 100%;
+    max-height: 400px; /* Altura máxima da imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.btn-sobre {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #c0392b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-sobre:hover {
+    background-color: #e74c3c; /* Tom mais claro ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto {
+        min-width: unset; /* Remove a largura mínima em telas menores */
+    }
+
+    .imagem {
+        max-height: 300px; /* Ajusta a altura máxima para telas menores */
+    }
+}
+
+
+
+
 
 
 
@@ -99,19 +132,20 @@ header p {
 }
 
 .contact-video h3 {
-    font-size: 2.5rem; /* Tamanho do texto grande */
+    font-size: 3rem; /* Tamanho aumentado para destaque */
     color: #ecf0f1; /* Cor clara para o título */
     margin-bottom: 40px; /* Espaçamento inferior */
     font-weight: bold; /* Negrito */
     text-transform: uppercase; /* Texto em letras maiúsculas */
     letter-spacing: 3px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para legibilidade */
 }
 
 /* Grid para organizar os vídeos */
 .video-grid {
     display: grid; /* Usa layout de grade */
     grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
-    gap: 30px; /* Espaçamento entre os itens */
+    gap: 40px; /* Espaçamento aumentado entre os itens */
     max-width: 1200px; /* Limita a largura total */
     margin: 0 auto; /* Centraliza o grid na página */
 }
@@ -122,13 +156,14 @@ header p {
     border-radius: 15px; /* Bordas arredondadas */
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
 }
 
 .video-box iframe {
     width: 100%; /* Largura total da caixa */
     height: 100%; /* Altura total da caixa */
     border: none; /* Remove a borda padrão do iframe */
+    border-radius: 15px; /* Bordas arredondadas no iframe */
 }
 
 .video-box h4 {
@@ -142,19 +177,19 @@ header p {
 
 /* Efeito de hover para as caixas de vídeo */
 .video-box:hover {
-    transform: translateY(-10px); /* Eleva a caixa visualmente */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+    transform: scale(1.05); /* Efeito de escala suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .video-grid {
         grid-template-columns: 1fr; /* Ajusta para uma única coluna */
-        gap: 20px; /* Reduz o espaçamento entre itens */
+        gap: 30px; /* Espaçamento ajustado para telas menores */
     }
 
     .contact-video h3 {
-        font-size: 2rem; /* Reduz o tamanho do título */
+        font-size: 2.5rem; /* Tamanho reduzido proporcionalmente */
     }
 }
 
@@ -273,120 +308,47 @@ body {
     }
 }
 /* ===== Seção de Contato ===== */
-#contato {
-    background: linear-gradient(90deg, #f7f7f7, #ececec); /* Fundo com gradiente suave */
-    padding: 50px 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
-    border-top: 5px solid #d9534f; /* Linha superior de destaque */
-    border-bottom: 5px solid #c9302c; /* Linha inferior de destaque */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para a seção */
-}
-
-#contato h2 {
-    font-size: 2rem; /* Tamanho do título */
-    color: #d9534f; /* Vermelho suave */
-    margin-bottom: 20px; /* Espaçamento inferior */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra no texto */
-}
-
-.contact-info {
-    font-size: 1.1rem; /* Tamanho do texto de contato */
-    color: #333; /* Cinza escuro */
-    line-height: 1.8; /* Espaçamento entre linhas */
-    margin-bottom: 30px; /* Espaçamento inferior */
-}
-
-.contact-info p {
-    margin: 10px 0; /* Espaçamento vertical entre parágrafos */
-}
-
-.contact-info strong {
-    color: #c9302c; /* Destaque em vermelho */
-}
-
-.contact-map {
-    margin-top: 20px; /* Espaçamento superior */
-}
-
-.contact-map h3 {
-    font-size: 1.5rem; /* Tamanho do subtítulo */
-    margin-bottom: 15px; /* Espaçamento inferior */
-    color: #333; /* Cinza escuro */
-}
-
-.contact-map iframe {
-    width: 100%; /* Ocupa toda a largura disponível */
-    max-width: 600px; /* Largura máxima */
-    height: 350px; /* Altura fixa */
-    border: 2px solid #ddd; /* Borda clara ao redor do mapa */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do mapa */
-}
-
-/* ===== Redes Sociais ===== */
 .social-icons {
-    margin-top: 50px; /* Espaçamento superior */
-    padding: 20px; /* Espaçamento interno */
-    background: #f7f7f7; /* Fundo claro */
-    border-top: 2px solid #ddd; /* Linha superior de separação */
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center;
+    margin: 20px 0;
 }
 
-.social-icons h3 {
-    font-size: 1.8rem; /* Tamanho do título */
-    color: #333; /* Cinza escuro */
-    margin-bottom: 20px; /* Espaçamento inferior */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    color: #555;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.social-icons a {
-    display: inline-block; /* Organiza os ícones em linha */
-    margin: 0 10px; /* Espaçamento horizontal entre os ícones */
-    font-size: 1.5rem; /* Tamanho do ícone */
-    color: #fff; /* Ícone branco */
-    width: 50px; /* Largura fixa do ícone */
-    height: 50px; /* Altura fixa do ícone */
-    line-height: 50px; /* Centraliza o texto verticalmente */
-    border-radius: 50%; /* Bordas arredondadas para formar um círculo */
-    background: #d9534f; /* Fundo vermelho */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor do ícone */
-    transition: all 0.3s ease; /* Animação suave no hover */
-    text-align: center; /* Centraliza o conteúdo no círculo */
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #007bff;
 }
 
-.social-icons a:hover {
-    background: #c9302c; /* Fundo mais escuro no hover */
-    transform: scale(1.1); /* Aumenta o tamanho do ícone */
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
-
-/* Estilo dos ícones FontAwesome */
-.fab {
-    font-size: 1.2rem; /* Tamanho padrão dos ícones */
-    color: #fff; /* Cor dos ícones */
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    object-fit: contain; /* Garante que o SVG mantenha a proporção */
 }
-
-/* Responsividade para redes sociais */
-@media (max-width: 768px) {
-    #contato {
-        text-align: left; /* Alinha o texto à esquerda */
-        padding: 30px 20px; /* Ajusta o espaçamento interno */
-    }
-
-    .contact-map iframe {
-        height: 300px; /* Altura reduzida para telas menores */
-    }
-
-    .social-icons {
-        padding: 20px 10px; /* Ajusta o espaçamento interno */
-    }
-
-    .social-icons a {
-        width: 40px; /* Ícones menores */
-        height: 40px; /* Ícones menores */
-        line-height: 40px; /* Centraliza o texto */
-        font-size: 1.2rem; /* Texto menor */
-    }
+.social-icon {
+    width: 48px;
+    height: 48px;
 }
-
+.social-icon svg {
+    width: 32px;
+    height: 32px;
+}
 /* ===== Rodapé ===== */
 footer {
     background: #333; /* Fundo escuro */
